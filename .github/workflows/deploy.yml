@@ -9,11 +9,10 @@ jobs:
     name: Build Js/Css
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Yarn Build
         run: |
           yarn install
-          yarn upgrade
           yarn prod
           cat public/mix-manifest.json # See asset versions in log
       - name: Upload build files
