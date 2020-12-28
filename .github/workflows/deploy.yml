@@ -13,6 +13,7 @@ jobs:
       - name: Yarn Build
         run: |
           yarn install
+          yarn upgrade
           yarn prod
           cat public/mix-manifest.json # See asset versions in log
       - name: Upload build files
